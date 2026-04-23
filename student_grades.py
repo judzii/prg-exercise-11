@@ -51,4 +51,21 @@ def main():
     print("pocet studentu:", results.count())
     print()
 
-    for index
+    for index in range(results.count()):
+        body = results.get_by_index(index)
+        znamka = results.get_grade(index)
+        print(f"{index}: {body} -> {znamka}")
+
+    print()
+    print(results.find(100))
+    print(results.get_sorted())
+    print(results.scores)
+
+    print()
+    random_results = StudentsGrades(random_numbers(20, 0, 100))
+    print(random_results.count())
+    print(random_results.get_sorted())
+
+if __name__ == "__main__":
+    main()
+
